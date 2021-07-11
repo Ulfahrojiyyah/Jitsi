@@ -1,0 +1,22 @@
+.container-home{
+    justify-content: center;
+}
+.container-home h1{
+    position: absolute;
+    left: 20%;
+    margin-top: 10%;
+
+}
+.home-img{
+    width: 30%;
+    height: 30%;
+    position: relative;
+    left: 68%;
+    margin-top: 54px;
+}
+
+.btn-home{
+    position: absolute;
+    left: 30%;
+    margin-top: 15%;
+}
