@@ -5,19 +5,15 @@ import { BrowserRouter as Router, Switch, Link } from "react-router-dom";
 
 
 const Home = ()=>{
-    return (<Router>
-        <Switch>
-            <Navbar/>
-        </Switch>  
+    return (
         <div className='Home-Navbar'>
+            <Navbar/>
                 <h1>Video Converence</h1>
                 <div className="btn-home">
                     <Link className="btn btn-primary" to={"/Signin"}>Sign In</Link>
                 </div>
                 <img className="home-img" src="img/home.svg"/>
             </div>
-        
-    </Router>
     )
 }
 export default Home

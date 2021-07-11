@@ -8,7 +8,7 @@ import Pagination from './Pagination';
 
 const EmployeeList = () => {
 
-    const {sortedEmployees} = useContext(EmployeeContext);
+    //const [sortedEmployees] = useContext(EmployeeContext);
 
     const [showAlert, setShowAlert] = useState(false);
 
@@ -42,13 +42,16 @@ const EmployeeList = () => {
     const totalPagesNum = Math.ceil(sortedEmployees.length / employeesPerPage);
 
 
-    return (
-        <div className="container-xl">
-        <div className="table-responsive">
-          <div className="table-wrapper">
-            <EmployeeContextProvider>
-    <>
+    return ( 
+        // ini ku coba coba
+    //<div className="container-xl">
+    //<div className="table-responsive">
+     // <div className="table-wrapper">
+    // <EmployeeContextProvider>
 
+        //</EmployeeContextProvider>
+          
+    <>
     <div className="table-title">
         <div className="row">
             <div className="col-sm-6">
@@ -109,10 +112,9 @@ const EmployeeList = () => {
         </Modal.Footer>
     </Modal>
     </>
-    </EmployeeContextProvider>
     </div>
-    </div></div>
-
+    </div>
+  </div>
     )
 
 }

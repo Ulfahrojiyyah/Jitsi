@@ -8,6 +8,7 @@ import AddForm from './components/Kuliah/AddForm';
 import EditForm from './components/Kuliah/EditForm';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import EmployeeContextProvider from './components/Kuliah/EmployeeContext';
 
 function App() {
   return (<Router>
@@ -17,10 +18,19 @@ function App() {
             <Route path="/Signin" component={Signin} />
             <Route path="/Signup" component={Signup} />
             <Route exact path='/Dashboard' component={Dashboard} />
-            <Route path="/EmployeeList" component={EmployeeList} />
+            <Route exact path='/EmployeeList' component={EmployeeList} />
             <Route path="/Add" component={AddForm} />
             <Route path="/Edit" component={EditForm} />
           </Switch>
+          {// ini dari tutorial <div className="container-xl">
+    //<div className="table-responsive">
+     // <div className="table-wrapper">
+    // <EmployeeContextProvider>
+     //   <EmployeeList/>
+        //</EmployeeContextProvider>
+       // </div>
+       // </div>
+        //</div>
     </div>
     </Router>
     
