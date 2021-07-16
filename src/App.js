@@ -1,7 +1,7 @@
 import React from 'react';
-import Home from './components/Home/Home';
-import Signin from './components/Home/Signin';
-import Signup from './components/Home/Signup';
+import Home from './components/Home/Pages/Home';
+import Signin from './components/Home/Pages/Signin/Signin';
+import Signup from './components/Home/Pages/Signup/Signup';
 import Dashboard from './components/Dashboard/Dashboard';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -30,15 +30,15 @@ function App() {
                     <Route path="/Signup" component={Signup} />
                     <Route exact path='/Dashboard' component={Dashboard} />
                     <Route path="/create" component={Create}/> 
-                    <Route path="/read/:id" component={Read}/>
-                    <Route path="/edit/:id" component={Edit}/>
-                    <Route path="/delete/:id" component={Delete}/>
+                    <Route path="/read" component={Read}/>
+                    <Route path="/edit" component={Edit}/>
+                    <Route path="/delete" component={Delete}/>
                     <Route exact path="/Listkuliah" component={ListKuliah}/>
                     <Route path="*" component={NotFound}/>
                     <Route path="/Tambah" component={Tambah}/> 
-                    <Route path="/LihatKelas/:id" component={LihatKelas}/>
-                    <Route path="/EditKelas/:id" component={EditKelas}/>
-                    <Route path="/Hapus/:id" component={Hapus}/>
+                    <Route path="/LihatKelas" component={LihatKelas}/>
+                    <Route path="/EditKelas" component={EditKelas}/>
+                    <Route path="/Hapus" component={Hapus}/>
                     
                   </Switch>
             </KelasProvider>

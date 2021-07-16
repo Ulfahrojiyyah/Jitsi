@@ -8,9 +8,9 @@ import { useParams } from "react-router-dom";
 import LihatKelas from "../../Kelas/LihatKelas/LihatKelas";
 
 const Read = () => {
-  const [kuliahs, setKuliah] = useContext(KuliahContext);
-  const { kode } = useParams();
-  const kuliah = kuliahs.filter((kuliah) => kuliah.kode == kode);
+  const [kuliahs, setKuliah]= useContext(KuliahContext);
+  const {kode} = useParams();
+  const kuliah = kuliahs.filter((kuliah) => kuliah.kode === kode);
 
   return (
     <div className="read">
@@ -18,7 +18,7 @@ const Read = () => {
       <h5>Nama: {kuliah[0].nama}</h5>
       <LihatKelas/>
     </div>
-    
+
   );
 };
 

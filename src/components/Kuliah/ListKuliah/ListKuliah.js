@@ -6,6 +6,7 @@ import { KuliahContext } from "../KuliahContext/KuliahContext";
 import { Modal} from 'react-bootstrap';
 import Create from "../Create/Create";
 
+
 const ListKuliah= () => {
   const [kuliahs, setKuliah] = useContext(KuliahContext);
 
@@ -50,12 +51,9 @@ const ListKuliah= () => {
                             </Button>
                           </Link>
 
-                          <Link to={"/delete/"+kuliah.kode
-                        }>
-                            <Button className="action__btn" variant="danger" >
-                              Delete
-                            </Button>
-                          </Link>
+                          <Link to={"/delete/"+kuliah.kode} onClick={handleShow}>
+                          <Button className="action__btn" data-toggle="modal"variant="danger"><span>Delete</span></Button>  
+                            </Link>
                         </td>
                       </tr>
                     ))}
@@ -63,15 +61,15 @@ const ListKuliah= () => {
               </Table>
 
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-            <Modal.Title>
-                Tambah Kelas 
-            </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-            <Create />
-        </Modal.Body>
-    </Modal>
+          <Modal.Header closeButton>
+              <Modal.Title>
+                  Tambah Kelas 
+              </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+              <Create />
+          </Modal.Body>
+      </Modal>
           </div>
         </div>
       </div>

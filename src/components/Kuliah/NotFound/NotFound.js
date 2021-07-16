@@ -10,7 +10,8 @@ const NotFound = () => {
             This URL is not Valid
         </p>
         <p>
-        <Link to="/ListKuliah"><Button variant="primary">Back to lis Kuliah</Button> </Link>
+        <Link to="/ListKuliah"><Button variant="primary">Back to ListKelas
+         Kuliah</Button> </Link>
         </p>
       </Jumbotron>
     </div>

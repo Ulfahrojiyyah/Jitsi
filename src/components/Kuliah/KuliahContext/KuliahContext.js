@@ -5,9 +5,9 @@ export const KuliahContext = createContext();
 export const KuliahProvider = (props) => {
   
     const [kuliahs, setKuliah] = useState([
-    { kode: 1, nama: "Salman", jumlah: "Front End Dev" },
-    { kode: 2, nama: "Shuvo", jumlah: "Data Scientist"},
-    { kode: 3, nama: "Mahadi", jumlah: "Full Stack Dev"},
+    { kode: 1, nama: "Salman", jumlah: "50" },
+    { kode: 2, nama: "Shuvo", jumlah: "30"},
+    { kode: 3, nama: "Mahadi", jumlah: "40"},
   ]);
 
   return (
