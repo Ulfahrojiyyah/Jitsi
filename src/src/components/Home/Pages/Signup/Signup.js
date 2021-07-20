@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {Link } from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import './Signup.css';
 
 const Signup = () => {
+    let history = useHistory();
     const[username,setUsername]= useState('');
     const[email,setEmail]= useState('');
     const[password,setPassword]= useState('');
@@ -18,6 +19,12 @@ const Signup = () => {
     const changePassword = (e) =>{
         const value = e.target.value
         setPassword(value)
+    }
+
+    const handleSignup = () => {
+       
+            history.push('/dashboard')
+     
     }
     return(
         <div className="form-container-register"> 
@@ -41,7 +48,7 @@ const Signup = () => {
                         <input type="password" class="form-control" id="floatingPassword" placeholder="Enter password" value={password} onChange={changePassword} />  
                         <label for="floatingPassword">Password</label>
                     </div>
-                    <button type="submit" className="form-input-btn">Signup</button>{' '}
+                    <button  onClick={() => handleSignup()} type="submit" className="form-input-btn">Signup</button>{' '}
                     <span className= "form-input-login"> 
                         <h5>Already have an account? Login <Link to="/Signin"> <a href ="#">Here</a> </Link> </h5>  
                     </span>

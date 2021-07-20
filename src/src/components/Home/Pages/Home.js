@@ -6,8 +6,8 @@ import '../../../App.js';
 const Home = ()=>{
     return (
         <div className='Home'>
-            <Navbar/>
-            <HeroSection/>    
+            <Navbar/>  
+            <HeroSection/>
             </div>      
     )
 }

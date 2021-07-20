@@ -79,7 +79,7 @@ const EditKelas = () => {
           />
         </Form.Group>
         <Link to="/LihatKelas">
-          <Button onSubmit={()=>editKelas} variant="primary" type="submit">
+          <Button onSubmit={editKelas} variant="primary" type="submit">
             Edit Kelas
           </Button>
           </Link>

@@ -5,9 +5,9 @@ export const KelasContext = createContext();
 export const KelasProvider = (props) => {
   
     const [kelass, setKelas] = useState([
-    { id: 1, name: "Salman", position: "Front End Dev", salary: 28000 },
-    { id: 2, name: "Shuvo", position: "Data Scientist", salary: 26000 },
-    { id: 3, name: "Mahadi", position: "Full Stack Dev", salary: 27000 },
+    { id: 1, idMataKuliah: '332D4E3', name: "Selasa tgl 10 juli jam 10.00", position: "20"},
+    { id: 2, idMataKuliah: '32DD432', name: "Rabu tgl 11 juli jam 11.00", position: "30"},
+    { id: 3, idMataKuliah: '1DE2231', name: "Senin tgl 09 juli jam 09.00", position: "40"},
   ]);
 
   return (

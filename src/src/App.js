@@ -21,9 +21,9 @@ import {KelasProvider} from './components/Kelas/KelasContext/KelasContext';
 
 function App() {
   return (<Router>
-      <div className="App">
-       <UserProvider> 
-       <KelasProvider> 
+            <div className="App">
+            <UserProvider> 
+              <KelasProvider> 
                   <Switch>
                     <Route exact path='/' component={Home} />
                     <Route path="/Signin" component={Signin} />
@@ -34,16 +34,16 @@ function App() {
                     <Route path="/edit/:id" component={Edit}/>
                     <Route path="/delete/:id" component={Delete}/>
                     <Route exact path="/Listkuliah" component={ListKuliah}/>
-                    <Route path="*" component={NotFound}/>
+                    <Route path="/editKelas/:id" component={EditKelas}/>
                     <Route path="/Tambah" component={Tambah}/> 
                     <Route path="/LihatKelas" component={LihatKelas}/>
-                    <Route path="/EditKelas/:id" component={EditKelas}/>
-                    <Route path="/Hapus/:id" component={Hapus}/>
+                    <Route path="/Hapus" component={Hapus}/>
+                    <Route path="*" component={NotFound}/>
                   </Switch>
-            </KelasProvider>
-          </UserProvider>
-      </div>
-    </Router>
+                </KelasProvider>
+              </UserProvider>
+            </div>
+          </Router>
   
   );
 }

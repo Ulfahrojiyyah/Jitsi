@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './NavDashboard.css'
+import '../Home/Pages/Home'
 import {Link } from "react-router-dom";
 
 function NavDashboard() {
@@ -28,12 +29,16 @@ function NavDashboard() {
         <>
             <nav className='navbar-dashboard'>
                 <div className='container-navbar'>
-                    <Link to='/' className='image-logo'>
-                        <i className='fab fa-typo3'onClick={closeMobileMenu}/>
-                    </Link>
+                    <div className='nav-left'>
+                        <Link to='/' className='navbar_logo' onClick={closeMobileMenu}>
+                            <i class='nav-logo' />
+                            <img src="images/logo.png" alt='spaceship'/>
+                        </Link>
+                    </div>
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
+                    <div className='nav-right'>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='navbar-item'>
                             <Link to='/' className='navbar-links' onClick={closeMobileMenu}>
@@ -56,7 +61,16 @@ function NavDashboard() {
                                 Kelas
                             </Link>
                         </li>
+                        <li className='navbar-item'>
+                            <Link
+                                to='/'
+                                className='navbar-links'
+                                onClick={closeMobileMenu}>
+                                Logout
+                            </Link>
+                        </li>
                     </ul>
+                    </div>
                 </div>
             </nav>
         </>
