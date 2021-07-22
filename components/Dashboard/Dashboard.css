@@ -1,0 +1,17 @@
+.dashboard{
+    background: url('../../images/foto4.jpg') center center/cover no-repeat;
+    height: 88.5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);*/
+    object-fit: contain;
+}
+.dashboard h2{
+    color:blanchedalmond;
+}
+.dashboard p{
+    color: blanchedalmond;
+}
