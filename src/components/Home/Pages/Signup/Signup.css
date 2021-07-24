@@ -15,6 +15,49 @@
   top: 49.8%;
   left: 43%;
 }
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 20px;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+.title-signup{
+  font-size: 1.7rem;
+  color: #444;
+  margin-bottom: 10px;
+  margin-left: 120px;
+  
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
 .form-img {
     width: 408px;
     height: 414px;
@@ -28,26 +71,16 @@
   top :10%;
 }
 
-.form-content-right h4{
+.form-content-right h2{
   position: relative;
-  left: 45%;
-}
-.form-floating label{
-  position: absolute;
-  left : 1%;
-  font-size: 0.9rem;
-}
-
-.form-control {
-  margin-top: 6%;
-  width: 165%;
+  left: 37%;
 }
 
 .form-input-btn
 {
   width: 77%;
   height: 8%;
-  margin-top: 15px;
+  margin-top: 6px;
   border-radius: 10px;
   position: relative;
   left: 20%;
@@ -70,7 +103,7 @@
   position: relative;
   left: 20%;
 }
-.form-input-login h5 {
+.form-input-login h4 {
     text-decoration: none;
     color: black;
     font-weight: 50;

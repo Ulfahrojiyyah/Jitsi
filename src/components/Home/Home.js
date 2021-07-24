@@ -1,19 +1,20 @@
 import React from 'react';
-import Navbar from './Navbar';
-import './Home.css';
-import { BrowserRouter as Router, Switch, Link } from "react-router-dom";
-
+import Header from './Header';
+import Feature from './Features';
+import About from './About';
+import aboutimage from '../../images/contact.svg'
+import Footer from './Footer'
 
 const Home = ()=>{
     return (
-        <div className='Home-Navbar'>
-            <Navbar/>
-                <h1>Video Converence</h1>
-                <div className="btn-home">
-                    <Link className="btn btn-primary" to={"/Signin"}>Sign In</Link>
-                </div>
-                <img className="home-img" src="img/home.svg"/>
-            </div>
+        <div className='Home'>
+            <Header/>
+            <Feature/>
+            <About image={aboutimage} title='Come yoo' button='Get The Contact'/>
+            <Footer/>
+          
+
+            </div>      
     )
 }
 export default Home

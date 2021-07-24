@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {Link } from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import './Signup.css';
 
 const Signup = () => {
+    let history = useHistory();
     const[username,setUsername]= useState('');
     const[email,setEmail]= useState('');
     const[password,setPassword]= useState('');
@@ -19,6 +20,13 @@ const Signup = () => {
         const value = e.target.value
         setPassword(value)
     }
+
+    const handleSignup = () => {
+       
+            history.push('/Dashboard')
+     
+    }
+    
     return(
         <div className="form-container-register"> 
             <div className="form-content-left">
@@ -26,25 +34,24 @@ const Signup = () => {
             </div>
                     
             <div className="form-content-right"> 
-          
-                    <h4>Sign Up</h4>
-                    <div className="form-floating">                      
-                        <input type="username" class="form-control" id="floatingInput" placeholder="Enter username" value={username} onChange={changeUsername} />
-                        <label for ="floatingInput">Username</label>
+                    <h3 class="title-signup">SIGN UP</h3>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>                      
+                        <input type="username" placeholder="Enter username" value={username} onChange={changeUsername} />
                     </div>
 
-                    <div className="form-floating">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="Enter email"  value={email} onChange={changeEmail} />
-                        <label for ="floatingInput">Email</label>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email"  placeholder="Enter email"  value={email} onChange={changeEmail} />
                     </div>
 
-                    <div className="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Enter password" value={password} onChange={changePassword} />  
-                        <label for="floatingPassword">Password</label>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Enter password" value={password} onChange={changePassword} />  
                     </div>
-                    <button type="submit" className="form-input-btn">Signup</button>{' '}
+                    <button  onClick={() => handleSignup()} type="submit" className="form-input-btn">Sign Up</button>{' '}
                     <span className= "form-input-login"> 
-                        <h5>Already have an account? Login <Link to="/Signin"> <a href ="#">Here</a> </Link> </h5>  
+                        <h4>Already have an account? Login <Link to="/Signin"> <a href ="#">Here</a> </Link> </h4>  
                     </span>
             </div>
         </div>

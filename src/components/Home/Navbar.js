@@ -1,76 +1,36 @@
-import React, {useState, useEffect} from 'react'
-import './Navbar.css'
-import {Link } from "react-router-dom";
-import { Button } from './Button';
+import React, { useState } from 'react'
+import logo from '../../images/logo.png'
 
 function Navbar() {
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-  
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
+    const [nav,setNav] = useState(false);
+    const changeBackground=() =>{
+        if(window.scrollY >= 960) {
+            setNav(true);
+        }
+        else{
+            setNav(false);
+        }
     }
-  };
-  
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener('resize', showButton);
-
-
+    window.addEventListener('scroll', changeBackground);
     return (
-        <>
-            <nav className='navbar'>
-                <div className='navbar-container'>
-                    <Link to='/' className='navbar-logo'>
-                        Unhas
-                        <i className='fab fa-typo3'onClick={closeMobileMenu}/>
-                    </Link>
-                    <div className='menu-icon' onClick={handleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-                    </div>
-                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                        <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                                Home
-                            </Link>
-                            </li>
-                        <li className='nav-item'>
-                            <Link
-                                to='/servis'
-                                className='nav-links'
-                                onClick={closeMobileMenu}>
-                                Services
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link
-                                to='/product'
-                                className='nav-links'
-                                onClick={closeMobileMenu}>
-                                Products
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to='/Signup'
-                                className='nav-links-mobile'
-                                onClick={closeMobileMenu}>
-                                Sign Up
-                            </Link>
-                        </li>
-                    </ul>
-                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
-                </div>
-            </nav>
-        </>
+        <nav className={nav ? 'nav active' : 'nav'}>
+            <a href='#' className='logo'>
+                <img src={logo} alt=''/>
+            </a>
+            <input type='checkbox' className='menu-btn' id='menu-btn'/>
+            <label className='menu-icon' for='menu-btn'>
+                <span className='nav-icon'></span>
+            </label>
+            <ul className= 'menu'>
+                <li><a href='/'style={{ textDecoration: 'none' }}>Home</a></li>
+                <li><a href='#'style={{ textDecoration: 'none' }}>About Us</a></li>
+                <li><a href='#'style={{ textDecoration: 'none' }}>Contact</a></li>
+                <li><a href='/Signup'style={{ textDecoration: 'none' }}>Sign Up</a></li>
+               
+            </ul>
+
+        </nav>
     )
 }
-export default Navbar;
+
+export default Navbar

@@ -1,17 +1,17 @@
-.dashboard{
+.dashboardmhs{
     background: url('../../images/foto4.jpg') center center/cover no-repeat;
-    height: 88.5vh;
+    height: 50vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);*/
-    object-fit: contain;
+    justify-content: center;
+    align-items: center;
 }
-.dashboard h2{
-    color:blanchedalmond;
+.dashboardmhs h2{
+    color:rgb(250, 250, 250);
 }
-.dashboard p{
+.dashboardmhs p{
     color: blanchedalmond;
 }

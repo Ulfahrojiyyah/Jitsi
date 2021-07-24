@@ -16,7 +16,7 @@ const EditKelas = () => {
   const [position, setPosition] = useState(kelas[0].position);
   const [salary, setSalary] = useState(kelas[0].salary);
   
-
+  
   const editName = (e) => {
     setName(e.target.value);
     const edited_name = name;
@@ -41,7 +41,7 @@ const EditKelas = () => {
   };
 
   return (
-    <div className="edit">
+    <div className="EditKelas">
       <Form>
         <Form.Group>
           <Form.Label>
@@ -79,13 +79,13 @@ const EditKelas = () => {
           />
         </Form.Group>
         <Link to="/LihatKelas">
-          <Button onSubmit={()=>editKelas} variant="primary" type="submit">
-            Edit User
+          <Button onSubmit={editKelas} variant="primary" type="submit">
+            Edit Kelas
           </Button>
           </Link>
           <Link to="/LihatKelas">
           <Button className="action_btn" variant="info">
-            Back to kelas
+            Back to List Kelas
           </Button>
         </Link>
       </Form>
